@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1><%= mapped.name %></h1>
+    <table>
+      <thead>
+        <% for(var i = 0; i < 5; i++){ %>
+          <th><%= mapped.getOwnProperties()[i] %></th>
+        <% } %>
+      </thead>
+      <tr>
+        <% for(var i = 0; i < 5; i++){ %>
+          <td><%= mapped[mapped.getOwnProperties()[i]] %></td>
+        <% } %>
+      </tr>
+    </table>
+  </body>
+</html>
